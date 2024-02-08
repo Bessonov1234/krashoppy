@@ -130,7 +130,14 @@ h2 {
 }
 .header_section .content_block {
 	height: 574px;
-	background: url(desctop__header_bg11275.jpg) center top no-repeat;
+	/* background: url(desctop__header__new_Blur.jpg)  no-repeat; */
+	/* background: url(desctop__header__new_Blur1.jpg)  no-repeat; */
+	background: url(desctop__header__new_shadow.jpg)  no-repeat;
+	/* background: url(desctop__header__new_Blur.jpg)  no-repeat; */
+	background-clip: content-box;
+	background-size: cover;
+	
+	
 }
 .header_section .content_block .info_block {
 	width: 560px;
@@ -175,6 +182,8 @@ h2 {
 }
 .ofr_bull{
 	margin: 25px 0 20px;
+	color: #ffffff;
+	font-weight: bold;
 }
 .ofr_bull>li{
 	padding: 0px 0 15px 30px;
