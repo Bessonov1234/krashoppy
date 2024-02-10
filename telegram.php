@@ -2,7 +2,7 @@
 
 $timer = '15';
 $token = "6865341617:AAEzxkXORHoM0K3nMeXcKyLpnPlNc-40Efc";
-$chat_id = "472189038";
+$chat_id = "-1002064384970";
 
 $back = '<p><a class="button" href="javascript: history.back()">Вернуться назад</a></p>';
 
