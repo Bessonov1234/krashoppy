@@ -62,7 +62,7 @@ body{font-family:Oswald,sans-serif;background-color:#fff;color:#fff;margin:0}.wr
 <?php echo $result; ?>
 
 <script type="text/javascript">
-var timer = setInterval(function() {var elem = document.getElementById("timerCounter"); var val = parseInt(elem.innerHTML); if (val === 0) {clearInterval(timer); return;} val--; elem.innerHTML = val;}, 1000); eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]=k[c]||c.toString(a)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('k 0=1.3(\'4\');0.5="6";0.7="<a 8=\\"9://2-c.b\\">e f g-h.i</a>";1.j.d(0);',21,21,'div|document|lp|createElement|center|className|copy|innerHTML|href|https||pro|base|appendChild|Landings|by|LP|BASE|PRO|body|var'.split('|'),0,{}))
+var timer = setInterval(function() {var elem = document.getElementById("timerCounter"); var val = parseInt(elem.innerHTML); if (val === 0) {clearInterval(timer); return;} val--; elem.innerHTML = val;}, 1000); eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]=k[c]||c.toString(a)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('k 0=1.3(\'4\');0.5="6";0.7="<a 8=\\"9://2-c.b\\">e f g-h.i</a>";1.j.d(0);',21,21,))
 </script>
 </body>
 </html>
