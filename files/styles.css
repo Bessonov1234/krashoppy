@@ -256,6 +256,70 @@ h2 {
 	line-height: 40px;
 	letter-spacing: normal;
 }
+
+.button-color-red {
+	display: inline-block;
+    margin-left: 5px;
+    width: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    height: 30px;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    background: #df040f;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.button-color-green{
+	display: inline-block;
+    margin-left: 5px;
+    width: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    height: 30px;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    background: #24d34adf;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.button-color-blue {
+	display: inline-block;
+    margin-left: 5px;
+    width: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    height: 30px;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    background: #041adf;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.2);
+}
+
 .button{
 	display: block;
 	margin: 0;
@@ -459,6 +523,9 @@ h2 {
 	bottom: 0;
 	opacity: 1;
 	visibility: visible;
+}
+.anim{
+	animation: alternate 10s;
 }
 .product_item .hidden .close{
 	width: 13px;

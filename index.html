@@ -70,16 +70,17 @@
         <h2 id="catalog">Каталог</h2>
         <div class="products_list clearfix">
           <div class="product_item">
-            <div class="img">
+            <div class="img" >
               <div class="img_text">
                 Кроссовки
                 <span style="color: #02a6b4">ORTO</span>
                 <span style="color: #ef7e32">MED</span> <br />
                 <span style="font-size: 16px"> (Ортопедическая обувь)</span>
               </div>
-              <img
+              <img class = "test"
+                id="test"
                 data-src="catalog_img/001.jpg"
-                src="files/shoes.png"
+                src="catalog_img/001.jpg"
                 class="lazy"
                 alt=""
               />
@@ -104,6 +105,12 @@
                     >Доставка по Україні без предоплати!</b
                   >
                 </p>
+              </div>
+              <div style="margin-top: 10px; color: black; font-size: 14px">
+                Колір: <br />
+                  <button class="button-color-blue" onclick="ColorBlue()" >⠀</button></b>
+                  <button class="button-color-green" onclick="ColorGreen()" >⠀</button></b>
+                  <button class="button-color-red" onclick="ColorRed()">⠀</button></b>
               </div>
               <div style="margin-top: 10px; color: black; font-size: 14px">
                 Розміри в наявності: <br />
@@ -286,7 +293,7 @@
               Залишайте замовлення і наш менеджер вам допоможе
             </div>
             <form
-              action="mail.php"
+              action="telegram.php"
               method="post"
               id="order_form"
               class="main-order-form main-order-form order_form"
@@ -372,7 +379,7 @@
             ознакомим с подходящими акционными предложениями!
           </div>
           <form
-            action="mail.php"
+            action="telegram.php"
             method="post"
             class="main-order-form popup-m1-form"
           >
@@ -396,7 +403,7 @@
         </div>
       </div>
     </div>
-
+    <script src="files/SelectColor.js"></script>
     <script src="files/lazyload.min.js"></script>
     <script src="assets_pages/land/js/slider/owlCarousel-2.2.1/owl.carousel.min.js"></script>
     <script src="files/scripts.js"></script>
