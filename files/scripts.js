@@ -1,3 +1,11 @@
+function sliders(){
+	const img1 = document.querySelector('.button-color-blue')
+
+	next.addEvenListener('click', ()=>{
+
+	})
+}
+sliders()
 $(document).ready(function() {
 
 	/* lazy load */
@@ -72,3 +80,10 @@ $(window).on("load", function(){
 	});
 	
 });
+
+
+
+
+
+
+
