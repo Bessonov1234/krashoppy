@@ -36,6 +36,8 @@
               <!-- <img src="files/logomak_logo_1.png" alt="" /> -->
               <img src="files/logomak_logo.png" alt="" />
             </div>
+            
+          
             <div class="info-action">Тотальний Розпродаж!</div>
             <h1 class="info-title">Тільки один день!</h1>
             <ul class="ofr_bull">
@@ -72,6 +74,60 @@
           </ul>
         </div>
       </div>
+      <!-- Timer -->
+      <!-- <style>
+        #timer {
+          font-size: 24px;
+          text-align: center;
+          margin: 20px;
+        }
+      </style> -->
+      <p class="title_sale">До кінця акції залишилось </p>
+      <div id="timer" class="time_sale">00:00:00</div>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          // Отримуємо елемент таймера
+          const timerElement = document.getElementById("timer");
+
+          // Задаємо час в секундах (24 години)
+          let timeInSeconds = 24 * 60 * 60;
+
+          // Функція для відображення та оновлення таймера
+          function updateTimer() {
+            const hours = Math.floor(timeInSeconds / 3600);
+            const minutes = Math.floor((timeInSeconds % 3600) / 60);
+            const seconds = timeInSeconds % 60;
+
+            // Відображення таймера у форматі HH:MM:SS
+            const formattedTime = `${padZero(hours)}:${padZero(
+              minutes
+            )}:${padZero(seconds)}`;
+            timerElement.textContent = formattedTime;
+
+            // Зменшуємо час на 1 секунду
+            timeInSeconds--;
+
+            // Якщо таймер закінчився, оновлюємо його
+            if (timeInSeconds < 0) {
+              timeInSeconds = 24 * 60 * 60; // Знову встановлюємо таймер на 24 години
+            }
+          }
+
+          // Функція для додавання нуля перед числами < 10
+          function padZero(number) {
+            return number < 10 ? `0${number}` : number;
+          }
+
+          // Оновлення таймера кожну секунду
+          setInterval(updateTimer, 1000);
+
+          // Викликемо updateTimer вперше, щоб відобразити початковий час
+          updateTimer();
+        });
+      </script>
+      <!-- Timer -->
+
       <div class="full-wrapper">
         <h2 id="catalog">Каталог</h2>
         <div class="products_list clearfix">
