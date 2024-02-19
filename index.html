@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="ru-RU">
+<html lang="ua-UA">
   <head>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <title>Интернет-магазин стильного одягу</title>
@@ -33,7 +33,6 @@
         <div class="wrapper">
           <div class="info_block">
             <div class="logo">
-              <!-- <img src="files/logomak_logo_1.png" alt="" /> -->
               <img src="files/logomak_logo.png" alt="" />
             </div>
             <div class="info-action">Тотальний Розпродаж!</div>
@@ -73,59 +72,52 @@
         </div>
       </div>
       <!-- !Timer -->
-      <style>
-        #timer {
-          text-align: center;
-          margin: 20px;
-          color: #03770b;
-          font-size: 85px;
-        }
-        .title_sale {
-          text-align: center;
-          font-size: 55px;
-        }
-      </style>
       <p class="title_sale">До кінця акції залишилось</p>
       <div id="timer" class="time_sale">00:00:00</div>
 
       <script>
         document.addEventListener("DOMContentLoaded", function () {
-          // Отримуємо елемент таймера
+          // Получаем элемент таймера
           const timerElement = document.getElementById("timer");
 
-          // Задаємо час в секундах (24 години)
-          let timeInSeconds = 24 * 60 * 60;
+          // Функция для генерации случайного числа в заданном диапазоне
+          function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+          }
 
-          // Функція для відображення та оновлення таймера
+          // Генерируем случайное начальное время в секундах (от 1 часа до 8 часов)
+          let timeInSeconds = getRandomInt(1 * 60 * 60, 8 * 60 * 60);
+
+          // Функция для отображения и обновления таймера
           function updateTimer() {
             const hours = Math.floor(timeInSeconds / 3600);
             const minutes = Math.floor((timeInSeconds % 3600) / 60);
             const seconds = timeInSeconds % 60;
 
-            // Відображення таймера у форматі HH:MM:SS
+            // Отображаем таймер в формате HH:MM:SS
             const formattedTime = `${padZero(hours)}:${padZero(
               minutes
             )}:${padZero(seconds)}`;
             timerElement.textContent = formattedTime;
 
-            // Зменшуємо час на 1 секунду
+            // Уменьшаем время на 1 секунду
             timeInSeconds--;
 
-            // Якщо таймер закінчився, оновлюємо його
+            // Если таймер истек, снова устанавливаем его на 8 часов
             if (timeInSeconds < 0) {
-              timeInSeconds = 24 * 60 * 60; // Знову встановлюємо таймер на 24 години
+              timeInSeconds = getRandomInt(1 * 60 * 60, 8 * 60 * 60);
             }
           }
 
-          // Функція для додавання нуля перед числами < 10
+          // Функция для добавления нуля перед числами < 10
           function padZero(number) {
             return number < 10 ? `0${number}` : number;
           }
 
-          // Оновлення таймера кожну секунду
+          // Обновляем таймер каждую секунду
           setInterval(updateTimer, 1000);
 
-          // Викликемо updateTimer вперше, щоб відобразити початковий час
+          // Вызываем updateTimer в первый раз для отображения начального времени
           updateTimer();
         });
       </script>
@@ -136,34 +128,40 @@
           <div class="product_item">
             <div class="img">
               <div class="img_text">
-                Кроссовки
-                <span style="color: #02a6b4">ORTO</span>
-                <span style="color: #ef7e32">MED</span> <br />
-                <span style="font-size: 16px"> (Ортопедическая обувь)</span>
+                💥Сукня💥
+                <br />
+                <br />
               </div>
               <div
                 id="carouselExampleSlidesOnly"
-                class="carousel slide"
+                class="carousel slide rozmer"
                 data-bs-ride="carousel"
               >
                 <div class="carousel-inner">
                   <div class="carousel-item active">
                     <img
-                      src="./catalog_img/001.jpg"
+                      src="./catalog_img/Сукня_Модель 022-1.jpg"
+                      class="d-block w-100"
+                      alt=""
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="./catalog_img/Сукня_Модель 022-2.jpg"
                       class="d-block w-100"
                       alt="..."
                     />
                   </div>
                   <div class="carousel-item">
                     <img
-                      src="./catalog_img/004.jpg"
+                      src="./catalog_img/Сукня_Модель 022-3.jpg"
                       class="d-block w-100"
                       alt="..."
                     />
                   </div>
                   <div class="carousel-item">
                     <img
-                      src="./catalog_img/005.jpg"
+                      src="./catalog_img/Сукня_Модель 022-4.jpg"
                       class="d-block w-100"
                       alt="..."
                     />
@@ -172,7 +170,153 @@
               </div>
             </div>
             <div class="content">
+              <div class="vendor_code">Артикул: 022</div>
+              <div style="margin-top: 10px; color: black; font-size: 14px">
+                <p></p>
+                <b></b>
+                <p></p>
+                <b>Виробник:</b> Турція
+                <p><b>Тканина:</b> Щильний креп-дайвинг</p>
+                <p>
+                  <b>Опис:</b>
+                  <b style="color: #03770b"
+                    >Якісна та стильна кофтинка . Ідеально поєднується з
+                    будь-яким низом</b
+                  >
+                </p>
+                <p>
+                  <b style="color: #02a6b4"
+                    >Доставка по Україні без предоплати!</b
+                  >
+                </p>
+              </div>
+              <div style="margin-top: 10px; color: black; font-size: 14px">
+                Розміри в наявності: <br />
+                <b
+                  style="
+                    padding: 5px;
+                    margin: 0 5px 0 5px;
+                    background: #7ad06b;
+                    border-radius: 10px;
+                    color: white;
+                    font: inherit;
+                  "
+                  >Xs</b
+                >
+                <b
+                  style="
+                    padding: 6px;
+                    margin: 0 5px 0 5px;
+                    background: #7ad06b;
+                    border-radius: 10px;
+                    color: white;
+                    font: inherit;
+                  "
+                  >S</b
+                ><b
+                  style="
+                    padding: 6px;
+                    margin: 0 5px 0 5px;
+                    background: #7ad06b;
+                    border-radius: 20px;
+                    color: white;
+                    font: inherit;
+                  "
+                  >M</b
+                ><b
+                  style="
+                    padding: 6px;
+                    margin: 0 5px 0 5px;
+                    background: #7ad06b;
+                    border-radius: 20px;
+                    color: white;
+                    font: inherit;
+                  "
+                  >L</b
+                >
+              </div>
+              <div class="price_block clearfix" style="margin-top: 20px">
+                <div class="price_item old">1500 грн</div>
+                <div class="price_item new" style="color: #ef7e32">450 грн</div>
+              </div>
+              <div class="button">Замовити за 1390 грн</div>
+            </div>
+            <div class="hidden">
+              <div class="close"></div>
+              <div class="action">
+                <span>ЗАМОВИТИ ПО АКЦИИ</span>
+              </div>
               <div class="vendor_code">Артикул: 001</div>
+              <div class="price_block clearfix">
+                <div class="price_item old">2780 грн</div>
+                <div class="price_item new" style="color: #ef7e32">
+                  1390 грн
+                </div>
+              </div>
+              <div class="economy">Економія: <span>1390 грн</span></div>
+              <form
+                action="telegram.php"
+                method="post"
+                class="main-order-form main-order-form order_form"
+              >
+                <input
+                  class="input"
+                  type="text"
+                  name="name"
+                  placeholder="Ваше имя"
+                  required=""
+                />
+                <input
+                  class="input"
+                  type="tel"
+                  name="phone"
+                  placeholder="Номер телефона"
+                  required=""
+                />
+                <input type="hidden" name="comment" value="Арт: 001" />
+                <button type="submit" class="button mm_button">Замовити</button>
+              </form>
+            </div>
+          </div>
+          <div class="product_item">
+            <div class="img">
+              <div class="img_text">
+                💥Спідничка зі страз💥
+                <br />
+                <br />
+              </div>
+              <div
+                id="carouselExampleSlidesOnly"
+                class="carousel slide rozmer"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="./catalog_img/Спідничка_зістраз-1.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="./catalog_img/Спідничка_зістраз-2.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="./catalog_img/Спідничка_зістраз-3.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content">
+              <div class="vendor_code">Артикул: 156</div>
               <div style="margin-top: 10px; color: black; font-size: 14px">
                 <p></p>
                 <b>Стать:</b> Жіночий
@@ -192,12 +336,6 @@
                   >
                 </p>
               </div>
-              <!-- <div style="margin-top: 10px; color: black; font-size: 14px">
-                Колір: <br />
-                  <button class="button-color-blue" onclick="ColorBlue()" >⠀</button>
-                  <button class="button-color-green" onclick="ColorGreen()" >⠀</button>
-                  <button class="button-color-red" onclick="ColorRed()">⠀</button>
-              </div> -->
               <div style="margin-top: 10px; color: black; font-size: 14px">
                 Розміри в наявності: <br />
                 <b
@@ -291,34 +429,33 @@
           <div class="product_item">
             <div class="img">
               <div class="img_text">
-                Кроссовки
-                <span style="color: #02a6b4">ORTO</span>
-                <span style="color: #ef7e32">MED</span> <br />
-                <span style="font-size: 16px"> (Ортопедическая обувь)</span>
+                💥Спідничка зі страз💥
+                <br />
+                <br />
               </div>
               <div
                 id="carouselExampleSlidesOnly"
-                class="carousel slide"
+                class="carousel slide rozmer"
                 data-bs-ride="carousel"
               >
                 <div class="carousel-inner">
                   <div class="carousel-item active">
                     <img
-                      src="./catalog_img/001.jpg"
+                      src="./catalog_img/Спідничка_зістраз-1.jpg"
                       class="d-block w-100"
                       alt="..."
                     />
                   </div>
                   <div class="carousel-item">
                     <img
-                      src="./catalog_img/004.jpg"
+                      src="./catalog_img/Спідничка_зістраз-2.jpg"
                       class="d-block w-100"
                       alt="..."
                     />
                   </div>
                   <div class="carousel-item">
                     <img
-                      src="./catalog_img/005.jpg"
+                      src="./catalog_img/Спідничка_зістраз-3.jpg"
                       class="d-block w-100"
                       alt="..."
                     />
@@ -327,7 +464,7 @@
               </div>
             </div>
             <div class="content">
-              <div class="vendor_code">Артикул: 001</div>
+              <div class="vendor_code">Артикул: 156</div>
               <div style="margin-top: 10px; color: black; font-size: 14px">
                 <p></p>
                 <b>Стать:</b> Жіночий
@@ -347,12 +484,1190 @@
                   >
                 </p>
               </div>
-              <!-- <div style="margin-top: 10px; color: black; font-size: 14px">
-                Колір: <br />
-                  <button class="button-color-blue" onclick="ColorBlue()" >⠀</button>
-                  <button class="button-color-green" onclick="ColorGreen()" >⠀</button>
-                  <button class="button-color-red" onclick="ColorRed()">⠀</button>
-              </div> -->
+              <div style="margin-top: 10px; color: black; font-size: 14px">
+                Розміри в наявності: <br />
+                <b
+                  style="
+                    padding: 5px;
+                    margin: 0 5px 0 5px;
+                    background: #7ad06b;
+                    border-radius: 10px;
+                    color: white;
+                    font: inherit;
+                  "
+                  >Xs</b
+                >
+                <b
+                  style="
+                    padding: 6px;
+                    margin: 0 5px 0 5px;
+                    background: #7ad06b;
+                    border-radius: 10px;
+                    color: white;
+                    font: inherit;
+                  "
+                  >S</b
+                ><b
+                  style="
+                    padding: 6px;
+                    margin: 0 5px 0 5px;
+                    background: #7ad06b;
+                    border-radius: 20px;
+                    color: white;
+                    font: inherit;
+                  "
+                  >M</b
+                ><b
+                  style="
+                    padding: 6px;
+                    margin: 0 5px 0 5px;
+                    background: #7ad06b;
+                    border-radius: 20px;
+                    color: white;
+                    font: inherit;
+                  "
+                  >L</b
+                >
+              </div>
+              <div class="price_block clearfix" style="margin-top: 20px">
+                <div class="price_item old">2780 грн</div>
+                <div class="price_item new" style="color: #ef7e32">
+                  1390 грн
+                </div>
+              </div>
+              <div class="button">Замовити за 1390 грн</div>
+            </div>
+            <div class="hidden">
+              <div class="close"></div>
+              <div class="action">
+                <span>ЗАМОВИТИ ПО АКЦИИ</span>
+              </div>
+              <div class="vendor_code">Артикул: 001</div>
+              <div class="price_block clearfix">
+                <div class="price_item old">2780 грн</div>
+                <div class="price_item new" style="color: #ef7e32">
+                  1390 грн
+                </div>
+              </div>
+              <div class="economy">Економія: <span>1390 грн</span></div>
+              <form
+                action="telegram.php"
+                method="post"
+                class="main-order-form main-order-form order_form"
+              >
+                <input
+                  class="input"
+                  type="text"
+                  name="name"
+                  placeholder="Ваше имя"
+                  required=""
+                />
+                <input
+                  class="input"
+                  type="tel"
+                  name="phone"
+                  placeholder="Номер телефона"
+                  required=""
+                />
+                <input type="hidden" name="comment" value="Арт: 001" />
+                <button type="submit" class="button mm_button">Замовити</button>
+              </form>
+            </div>
+          </div>
+          <div class="product_item">
+            <div class="img">
+              <div class="img_text">
+                💥Спідничка зі страз💥
+                <br />
+                <br />
+              </div>
+              <div
+                id="carouselExampleSlidesOnly"
+                class="carousel slide rozmer"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="./catalog_img/Спідничка_зістраз-1.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="./catalog_img/Спідничка_зістраз-2.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="./catalog_img/Спідничка_зістраз-3.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content">
+              <div class="vendor_code">Артикул: 156</div>
+              <div style="margin-top: 10px; color: black; font-size: 14px">
+                <p></p>
+                <b>Стать:</b> Жіночий
+                <p></p>
+                <b>Виробник:</b> Турція
+                <p><b>Тканина:</b> Щильний креп-дайвинг</p>
+                <p>
+                  <b>Опис:</b>
+                  <b style="color: #03770b"
+                    >Якісна та стильна кофтинка . Ідеально поєднується з
+                    будь-яким низом</b
+                  >
+                </p>
+                <p>
+                  <b style="color: #02a6b4"
+                    >Доставка по Україні без предоплати!</b
+                  >
+                </p>
+              </div>
+              <div style="margin-top: 10px; color: black; font-size: 14px">
+                Розміри в наявності: <br />
+                <b
+                  style="
+                    padding: 5px;
+                    margin: 0 5px 0 5px;
+                    background: #7ad06b;
+                    border-radius: 10px;
+                    color: white;
+                    font: inherit;
+                  "
+                  >Xs</b
+                >
+                <b
+                  style="
+                    padding: 6px;
+                    margin: 0 5px 0 5px;
+                    background: #7ad06b;
+                    border-radius: 10px;
+                    color: white;
+                    font: inherit;
+                  "
+                  >S</b
+                ><b
+                  style="
+                    padding: 6px;
+                    margin: 0 5px 0 5px;
+                    background: #7ad06b;
+                    border-radius: 20px;
+                    color: white;
+                    font: inherit;
+                  "
+                  >M</b
+                ><b
+                  style="
+                    padding: 6px;
+                    margin: 0 5px 0 5px;
+                    background: #7ad06b;
+                    border-radius: 20px;
+                    color: white;
+                    font: inherit;
+                  "
+                  >L</b
+                >
+              </div>
+              <div class="price_block clearfix" style="margin-top: 20px">
+                <div class="price_item old">2780 грн</div>
+                <div class="price_item new" style="color: #ef7e32">
+                  1390 грн
+                </div>
+              </div>
+              <div class="button">Замовити за 1390 грн</div>
+            </div>
+            <div class="hidden">
+              <div class="close"></div>
+              <div class="action">
+                <span>ЗАМОВИТИ ПО АКЦИИ</span>
+              </div>
+              <div class="vendor_code">Артикул: 001</div>
+              <div class="price_block clearfix">
+                <div class="price_item old">2780 грн</div>
+                <div class="price_item new" style="color: #ef7e32">
+                  1390 грн
+                </div>
+              </div>
+              <div class="economy">Економія: <span>1390 грн</span></div>
+              <form
+                action="telegram.php"
+                method="post"
+                class="main-order-form main-order-form order_form"
+              >
+                <input
+                  class="input"
+                  type="text"
+                  name="name"
+                  placeholder="Ваше имя"
+                  required=""
+                />
+                <input
+                  class="input"
+                  type="tel"
+                  name="phone"
+                  placeholder="Номер телефона"
+                  required=""
+                />
+                <input type="hidden" name="comment" value="Арт: 001" />
+                <button type="submit" class="button mm_button">Замовити</button>
+              </form>
+            </div>
+          </div>
+          <div class="product_item">
+            <div class="img">
+              <div class="img_text">
+                💥Спідничка зі страз💥
+                <br />
+                <br />
+              </div>
+              <div
+                id="carouselExampleSlidesOnly"
+                class="carousel slide rozmer"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="./catalog_img/Спідничка_зістраз-1.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="./catalog_img/Спідничка_зістраз-2.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="./catalog_img/Спідничка_зістраз-3.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content">
+              <div class="vendor_code">Артикул: 156</div>
+              <div style="margin-top: 10px; color: black; font-size: 14px">
+                <p></p>
+                <b>Стать:</b> Жіночий
+                <p></p>
+                <b>Виробник:</b> Турція
+                <p><b>Тканина:</b> Щильний креп-дайвинг</p>
+                <p>
+                  <b>Опис:</b>
+                  <b style="color: #03770b"
+                    >Якісна та стильна кофтинка . Ідеально поєднується з
+                    будь-яким низом</b
+                  >
+                </p>
+                <p>
+                  <b style="color: #02a6b4"
+                    >Доставка по Україні без предоплати!</b
+                  >
+                </p>
+              </div>
+              <div style="margin-top: 10px; color: black; font-size: 14px">
+                Розміри в наявності: <br />
+                <b
+                  style="
+                    padding: 5px;
+                    margin: 0 5px 0 5px;
+                    background: #7ad06b;
+                    border-radius: 10px;
+                    color: white;
+                    font: inherit;
+                  "
+                  >Xs</b
+                >
+                <b
+                  style="
+                    padding: 6px;
+                    margin: 0 5px 0 5px;
+                    background: #7ad06b;
+                    border-radius: 10px;
+                    color: white;
+                    font: inherit;
+                  "
+                  >S</b
+                ><b
+                  style="
+                    padding: 6px;
+                    margin: 0 5px 0 5px;
+                    background: #7ad06b;
+                    border-radius: 20px;
+                    color: white;
+                    font: inherit;
+                  "
+                  >M</b
+                ><b
+                  style="
+                    padding: 6px;
+                    margin: 0 5px 0 5px;
+                    background: #7ad06b;
+                    border-radius: 20px;
+                    color: white;
+                    font: inherit;
+                  "
+                  >L</b
+                >
+              </div>
+              <div class="price_block clearfix" style="margin-top: 20px">
+                <div class="price_item old">2780 грн</div>
+                <div class="price_item new" style="color: #ef7e32">
+                  1390 грн
+                </div>
+              </div>
+              <div class="button">Замовити за 1390 грн</div>
+            </div>
+            <div class="hidden">
+              <div class="close"></div>
+              <div class="action">
+                <span>ЗАМОВИТИ ПО АКЦИИ</span>
+              </div>
+              <div class="vendor_code">Артикул: 001</div>
+              <div class="price_block clearfix">
+                <div class="price_item old">2780 грн</div>
+                <div class="price_item new" style="color: #ef7e32">
+                  1390 грн
+                </div>
+              </div>
+              <div class="economy">Економія: <span>1390 грн</span></div>
+              <form
+                action="telegram.php"
+                method="post"
+                class="main-order-form main-order-form order_form"
+              >
+                <input
+                  class="input"
+                  type="text"
+                  name="name"
+                  placeholder="Ваше имя"
+                  required=""
+                />
+                <input
+                  class="input"
+                  type="tel"
+                  name="phone"
+                  placeholder="Номер телефона"
+                  required=""
+                />
+                <input type="hidden" name="comment" value="Арт: 001" />
+                <button type="submit" class="button mm_button">Замовити</button>
+              </form>
+            </div>
+          </div>
+          <div class="product_item">
+            <div class="img">
+              <div class="img_text">
+                💥Спідничка зі страз💥
+                <br />
+                <br />
+              </div>
+              <div
+                id="carouselExampleSlidesOnly"
+                class="carousel slide rozmer"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="./catalog_img/Спідничка_зістраз-1.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="./catalog_img/Спідничка_зістраз-2.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="./catalog_img/Спідничка_зістраз-3.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content">
+              <div class="vendor_code">Артикул: 156</div>
+              <div style="margin-top: 10px; color: black; font-size: 14px">
+                <p></p>
+                <b>Стать:</b> Жіночий
+                <p></p>
+                <b>Виробник:</b> Турція
+                <p><b>Тканина:</b> Щильний креп-дайвинг</p>
+                <p>
+                  <b>Опис:</b>
+                  <b style="color: #03770b"
+                    >Якісна та стильна кофтинка . Ідеально поєднується з
+                    будь-яким низом</b
+                  >
+                </p>
+                <p>
+                  <b style="color: #02a6b4"
+                    >Доставка по Україні без предоплати!</b
+                  >
+                </p>
+              </div>
+              <div style="margin-top: 10px; color: black; font-size: 14px">
+                Розміри в наявності: <br />
+                <b
+                  style="
+                    padding: 5px;
+                    margin: 0 5px 0 5px;
+                    background: #7ad06b;
+                    border-radius: 10px;
+                    color: white;
+                    font: inherit;
+                  "
+                  >Xs</b
+                >
+                <b
+                  style="
+                    padding: 6px;
+                    margin: 0 5px 0 5px;
+                    background: #7ad06b;
+                    border-radius: 10px;
+                    color: white;
+                    font: inherit;
+                  "
+                  >S</b
+                ><b
+                  style="
+                    padding: 6px;
+                    margin: 0 5px 0 5px;
+                    background: #7ad06b;
+                    border-radius: 20px;
+                    color: white;
+                    font: inherit;
+                  "
+                  >M</b
+                ><b
+                  style="
+                    padding: 6px;
+                    margin: 0 5px 0 5px;
+                    background: #7ad06b;
+                    border-radius: 20px;
+                    color: white;
+                    font: inherit;
+                  "
+                  >L</b
+                >
+              </div>
+              <div class="price_block clearfix" style="margin-top: 20px">
+                <div class="price_item old">2780 грн</div>
+                <div class="price_item new" style="color: #ef7e32">
+                  1390 грн
+                </div>
+              </div>
+              <div class="button">Замовити за 1390 грн</div>
+            </div>
+            <div class="hidden">
+              <div class="close"></div>
+              <div class="action">
+                <span>ЗАМОВИТИ ПО АКЦИИ</span>
+              </div>
+              <div class="vendor_code">Артикул: 001</div>
+              <div class="price_block clearfix">
+                <div class="price_item old">2780 грн</div>
+                <div class="price_item new" style="color: #ef7e32">
+                  1390 грн
+                </div>
+              </div>
+              <div class="economy">Економія: <span>1390 грн</span></div>
+              <form
+                action="telegram.php"
+                method="post"
+                class="main-order-form main-order-form order_form"
+              >
+                <input
+                  class="input"
+                  type="text"
+                  name="name"
+                  placeholder="Ваше имя"
+                  required=""
+                />
+                <input
+                  class="input"
+                  type="tel"
+                  name="phone"
+                  placeholder="Номер телефона"
+                  required=""
+                />
+                <input type="hidden" name="comment" value="Арт: 001" />
+                <button type="submit" class="button mm_button">Замовити</button>
+              </form>
+            </div>
+          </div>
+          <div class="product_item">
+            <div class="img">
+              <div class="img_text">
+                💥Спідничка зі страз💥
+                <br />
+                <br />
+              </div>
+              <div
+                id="carouselExampleSlidesOnly"
+                class="carousel slide rozmer"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="./catalog_img/Спідничка_зістраз-1.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="./catalog_img/Спідничка_зістраз-2.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="./catalog_img/Спідничка_зістраз-3.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content">
+              <div class="vendor_code">Артикул: 156</div>
+              <div style="margin-top: 10px; color: black; font-size: 14px">
+                <p></p>
+                <b>Стать:</b> Жіночий
+                <p></p>
+                <b>Виробник:</b> Турція
+                <p><b>Тканина:</b> Щильний креп-дайвинг</p>
+                <p>
+                  <b>Опис:</b>
+                  <b style="color: #03770b"
+                    >Якісна та стильна кофтинка . Ідеально поєднується з
+                    будь-яким низом</b
+                  >
+                </p>
+                <p>
+                  <b style="color: #02a6b4"
+                    >Доставка по Україні без предоплати!</b
+                  >
+                </p>
+              </div>
+              <div style="margin-top: 10px; color: black; font-size: 14px">
+                Розміри в наявності: <br />
+                <b
+                  style="
+                    padding: 5px;
+                    margin: 0 5px 0 5px;
+                    background: #7ad06b;
+                    border-radius: 10px;
+                    color: white;
+                    font: inherit;
+                  "
+                  >Xs</b
+                >
+                <b
+                  style="
+                    padding: 6px;
+                    margin: 0 5px 0 5px;
+                    background: #7ad06b;
+                    border-radius: 10px;
+                    color: white;
+                    font: inherit;
+                  "
+                  >S</b
+                ><b
+                  style="
+                    padding: 6px;
+                    margin: 0 5px 0 5px;
+                    background: #7ad06b;
+                    border-radius: 20px;
+                    color: white;
+                    font: inherit;
+                  "
+                  >M</b
+                ><b
+                  style="
+                    padding: 6px;
+                    margin: 0 5px 0 5px;
+                    background: #7ad06b;
+                    border-radius: 20px;
+                    color: white;
+                    font: inherit;
+                  "
+                  >L</b
+                >
+              </div>
+              <div class="price_block clearfix" style="margin-top: 20px">
+                <div class="price_item old">2780 грн</div>
+                <div class="price_item new" style="color: #ef7e32">
+                  1390 грн
+                </div>
+              </div>
+              <div class="button">Замовити за 1390 грн</div>
+            </div>
+            <div class="hidden">
+              <div class="close"></div>
+              <div class="action">
+                <span>ЗАМОВИТИ ПО АКЦИИ</span>
+              </div>
+              <div class="vendor_code">Артикул: 001</div>
+              <div class="price_block clearfix">
+                <div class="price_item old">2780 грн</div>
+                <div class="price_item new" style="color: #ef7e32">
+                  1390 грн
+                </div>
+              </div>
+              <div class="economy">Економія: <span>1390 грн</span></div>
+              <form
+                action="telegram.php"
+                method="post"
+                class="main-order-form main-order-form order_form"
+              >
+                <input
+                  class="input"
+                  type="text"
+                  name="name"
+                  placeholder="Ваше имя"
+                  required=""
+                />
+                <input
+                  class="input"
+                  type="tel"
+                  name="phone"
+                  placeholder="Номер телефона"
+                  required=""
+                />
+                <input type="hidden" name="comment" value="Арт: 001" />
+                <button type="submit" class="button mm_button">Замовити</button>
+              </form>
+            </div>
+          </div>
+          <div class="product_item">
+            <div class="img">
+              <div class="img_text">
+                💥Спідничка зі страз💥
+                <br />
+                <br />
+              </div>
+              <div
+                id="carouselExampleSlidesOnly"
+                class="carousel slide rozmer"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="./catalog_img/Спідничка_зістраз-1.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="./catalog_img/Спідничка_зістраз-2.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="./catalog_img/Спідничка_зістраз-3.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content">
+              <div class="vendor_code">Артикул: 156</div>
+              <div style="margin-top: 10px; color: black; font-size: 14px">
+                <p></p>
+                <b>Стать:</b> Жіночий
+                <p></p>
+                <b>Виробник:</b> Турція
+                <p><b>Тканина:</b> Щильний креп-дайвинг</p>
+                <p>
+                  <b>Опис:</b>
+                  <b style="color: #03770b"
+                    >Якісна та стильна кофтинка . Ідеально поєднується з
+                    будь-яким низом</b
+                  >
+                </p>
+                <p>
+                  <b style="color: #02a6b4"
+                    >Доставка по Україні без предоплати!</b
+                  >
+                </p>
+              </div>
+              <div style="margin-top: 10px; color: black; font-size: 14px">
+                Розміри в наявності: <br />
+                <b
+                  style="
+                    padding: 5px;
+                    margin: 0 5px 0 5px;
+                    background: #7ad06b;
+                    border-radius: 10px;
+                    color: white;
+                    font: inherit;
+                  "
+                  >Xs</b
+                >
+                <b
+                  style="
+                    padding: 6px;
+                    margin: 0 5px 0 5px;
+                    background: #7ad06b;
+                    border-radius: 10px;
+                    color: white;
+                    font: inherit;
+                  "
+                  >S</b
+                ><b
+                  style="
+                    padding: 6px;
+                    margin: 0 5px 0 5px;
+                    background: #7ad06b;
+                    border-radius: 20px;
+                    color: white;
+                    font: inherit;
+                  "
+                  >M</b
+                ><b
+                  style="
+                    padding: 6px;
+                    margin: 0 5px 0 5px;
+                    background: #7ad06b;
+                    border-radius: 20px;
+                    color: white;
+                    font: inherit;
+                  "
+                  >L</b
+                >
+              </div>
+              <div class="price_block clearfix" style="margin-top: 20px">
+                <div class="price_item old">2780 грн</div>
+                <div class="price_item new" style="color: #ef7e32">
+                  1390 грн
+                </div>
+              </div>
+              <div class="button">Замовити за 1390 грн</div>
+            </div>
+            <div class="hidden">
+              <div class="close"></div>
+              <div class="action">
+                <span>ЗАМОВИТИ ПО АКЦИИ</span>
+              </div>
+              <div class="vendor_code">Артикул: 001</div>
+              <div class="price_block clearfix">
+                <div class="price_item old">2780 грн</div>
+                <div class="price_item new" style="color: #ef7e32">
+                  1390 грн
+                </div>
+              </div>
+              <div class="economy">Економія: <span>1390 грн</span></div>
+              <form
+                action="telegram.php"
+                method="post"
+                class="main-order-form main-order-form order_form"
+              >
+                <input
+                  class="input"
+                  type="text"
+                  name="name"
+                  placeholder="Ваше имя"
+                  required=""
+                />
+                <input
+                  class="input"
+                  type="tel"
+                  name="phone"
+                  placeholder="Номер телефона"
+                  required=""
+                />
+                <input type="hidden" name="comment" value="Арт: 001" />
+                <button type="submit" class="button mm_button">Замовити</button>
+              </form>
+            </div>
+          </div>
+          <div class="product_item">
+            <div class="img">
+              <div class="img_text">
+                💥Спідничка зі страз💥
+                <br />
+                <br />
+              </div>
+              <div
+                id="carouselExampleSlidesOnly"
+                class="carousel slide rozmer"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="./catalog_img/Спідничка_зістраз-1.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="./catalog_img/Спідничка_зістраз-2.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="./catalog_img/Спідничка_зістраз-3.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content">
+              <div class="vendor_code">Артикул: 156</div>
+              <div style="margin-top: 10px; color: black; font-size: 14px">
+                <p></p>
+                <b>Стать:</b> Жіночий
+                <p></p>
+                <b>Виробник:</b> Турція
+                <p><b>Тканина:</b> Щильний креп-дайвинг</p>
+                <p>
+                  <b>Опис:</b>
+                  <b style="color: #03770b"
+                    >Якісна та стильна кофтинка . Ідеально поєднується з
+                    будь-яким низом</b
+                  >
+                </p>
+                <p>
+                  <b style="color: #02a6b4"
+                    >Доставка по Україні без предоплати!</b
+                  >
+                </p>
+              </div>
+              <div style="margin-top: 10px; color: black; font-size: 14px">
+                Розміри в наявності: <br />
+                <b
+                  style="
+                    padding: 5px;
+                    margin: 0 5px 0 5px;
+                    background: #7ad06b;
+                    border-radius: 10px;
+                    color: white;
+                    font: inherit;
+                  "
+                  >Xs</b
+                >
+                <b
+                  style="
+                    padding: 6px;
+                    margin: 0 5px 0 5px;
+                    background: #7ad06b;
+                    border-radius: 10px;
+                    color: white;
+                    font: inherit;
+                  "
+                  >S</b
+                ><b
+                  style="
+                    padding: 6px;
+                    margin: 0 5px 0 5px;
+                    background: #7ad06b;
+                    border-radius: 20px;
+                    color: white;
+                    font: inherit;
+                  "
+                  >M</b
+                ><b
+                  style="
+                    padding: 6px;
+                    margin: 0 5px 0 5px;
+                    background: #7ad06b;
+                    border-radius: 20px;
+                    color: white;
+                    font: inherit;
+                  "
+                  >L</b
+                >
+              </div>
+              <div class="price_block clearfix" style="margin-top: 20px">
+                <div class="price_item old">2780 грн</div>
+                <div class="price_item new" style="color: #ef7e32">
+                  1390 грн
+                </div>
+              </div>
+              <div class="button">Замовити за 1390 грн</div>
+            </div>
+            <div class="hidden">
+              <div class="close"></div>
+              <div class="action">
+                <span>ЗАМОВИТИ ПО АКЦИИ</span>
+              </div>
+              <div class="vendor_code">Артикул: 001</div>
+              <div class="price_block clearfix">
+                <div class="price_item old">2780 грн</div>
+                <div class="price_item new" style="color: #ef7e32">
+                  1390 грн
+                </div>
+              </div>
+              <div class="economy">Економія: <span>1390 грн</span></div>
+              <form
+                action="telegram.php"
+                method="post"
+                class="main-order-form main-order-form order_form"
+              >
+                <input
+                  class="input"
+                  type="text"
+                  name="name"
+                  placeholder="Ваше имя"
+                  required=""
+                />
+                <input
+                  class="input"
+                  type="tel"
+                  name="phone"
+                  placeholder="Номер телефона"
+                  required=""
+                />
+                <input type="hidden" name="comment" value="Арт: 001" />
+                <button type="submit" class="button mm_button">Замовити</button>
+              </form>
+            </div>
+          </div>
+          <div class="product_item">
+            <div class="img">
+              <div class="img_text">
+                💥Спідничка зі страз💥
+                <br />
+                <br />
+              </div>
+              <div
+                id="carouselExampleSlidesOnly"
+                class="carousel slide rozmer"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="./catalog_img/Спідничка_зістраз-1.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="./catalog_img/Спідничка_зістраз-2.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="./catalog_img/Спідничка_зістраз-3.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content">
+              <div class="vendor_code">Артикул: 156</div>
+              <div style="margin-top: 10px; color: black; font-size: 14px">
+                <p></p>
+                <b>Стать:</b> Жіночий
+                <p></p>
+                <b>Виробник:</b> Турція
+                <p><b>Тканина:</b> Щильний креп-дайвинг</p>
+                <p>
+                  <b>Опис:</b>
+                  <b style="color: #03770b"
+                    >Якісна та стильна кофтинка . Ідеально поєднується з
+                    будь-яким низом</b
+                  >
+                </p>
+                <p>
+                  <b style="color: #02a6b4"
+                    >Доставка по Україні без предоплати!</b
+                  >
+                </p>
+              </div>
+              <div style="margin-top: 10px; color: black; font-size: 14px">
+                Розміри в наявності: <br />
+                <b
+                  style="
+                    padding: 5px;
+                    margin: 0 5px 0 5px;
+                    background: #7ad06b;
+                    border-radius: 10px;
+                    color: white;
+                    font: inherit;
+                  "
+                  >Xs</b
+                >
+                <b
+                  style="
+                    padding: 6px;
+                    margin: 0 5px 0 5px;
+                    background: #7ad06b;
+                    border-radius: 10px;
+                    color: white;
+                    font: inherit;
+                  "
+                  >S</b
+                ><b
+                  style="
+                    padding: 6px;
+                    margin: 0 5px 0 5px;
+                    background: #7ad06b;
+                    border-radius: 20px;
+                    color: white;
+                    font: inherit;
+                  "
+                  >M</b
+                ><b
+                  style="
+                    padding: 6px;
+                    margin: 0 5px 0 5px;
+                    background: #7ad06b;
+                    border-radius: 20px;
+                    color: white;
+                    font: inherit;
+                  "
+                  >L</b
+                >
+              </div>
+              <div class="price_block clearfix" style="margin-top: 20px">
+                <div class="price_item old">2780 грн</div>
+                <div class="price_item new" style="color: #ef7e32">
+                  1390 грн
+                </div>
+              </div>
+              <div class="button">Замовити за 1390 грн</div>
+            </div>
+            <div class="hidden">
+              <div class="close"></div>
+              <div class="action">
+                <span>ЗАМОВИТИ ПО АКЦИИ</span>
+              </div>
+              <div class="vendor_code">Артикул: 001</div>
+              <div class="price_block clearfix">
+                <div class="price_item old">2780 грн</div>
+                <div class="price_item new" style="color: #ef7e32">
+                  1390 грн
+                </div>
+              </div>
+              <div class="economy">Економія: <span>1390 грн</span></div>
+              <form
+                action="telegram.php"
+                method="post"
+                class="main-order-form main-order-form order_form"
+              >
+                <input
+                  class="input"
+                  type="text"
+                  name="name"
+                  placeholder="Ваше имя"
+                  required=""
+                />
+                <input
+                  class="input"
+                  type="tel"
+                  name="phone"
+                  placeholder="Номер телефона"
+                  required=""
+                />
+                <input type="hidden" name="comment" value="Арт: 001" />
+                <button type="submit" class="button mm_button">Замовити</button>
+              </form>
+            </div>
+          </div>
+          <div class="product_item">
+            <div class="img">
+              <div class="img_text">
+                💥Спідничка зі страз💥
+                <br />
+                <br />
+              </div>
+              <div
+                id="carouselExampleSlidesOnly"
+                class="carousel slide rozmer"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="./catalog_img/Спідничка_зістраз-1.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="./catalog_img/Спідничка_зістраз-2.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="./catalog_img/Спідничка_зістраз-3.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content">
+              <div class="vendor_code">Артикул: 156</div>
+              <div style="margin-top: 10px; color: black; font-size: 14px">
+                <p></p>
+                <b>Стать:</b> Жіночий
+                <p></p>
+                <b>Виробник:</b> Турція
+                <p><b>Тканина:</b> Щильний креп-дайвинг</p>
+                <p>
+                  <b>Опис:</b>
+                  <b style="color: #03770b"
+                    >Якісна та стильна кофтинка . Ідеально поєднується з
+                    будь-яким низом</b
+                  >
+                </p>
+                <p>
+                  <b style="color: #02a6b4"
+                    >Доставка по Україні без предоплати!</b
+                  >
+                </p>
+              </div>
               <div style="margin-top: 10px; color: black; font-size: 14px">
                 Розміри в наявності: <br />
                 <b
@@ -468,7 +1783,6 @@
     <section class="reviews_section">
       <div class="wrapper">
         <h2>Відгуки клієнтів</h2>
-        <!--<p class="description">Более <span>95,4%</span> покупателей рекомендуют наш магазин</p>-->
         <div class="reviews_list owl-carousel">
           <div class="review_item">
             <span>“Вже дригий раз замовляю”</span>

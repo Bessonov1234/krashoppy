@@ -142,8 +142,21 @@ h2 {
 	font-family: 'Roboto', sans-serif ;
 	color: #000;
 	font-weight: 400;
-	
 }
+/* ! Розмір фото на блоках */
+.rozmer{
+height: 500px;
+}
+/* ! Розмір фото на блоках */
+/* ! Grid for product */
+.clearfix{
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(23rem, 1fr));
+	padding: 0 80px;
+	gap: 20px;
+}
+/* ! Grid for product */
+
 .header_section .content_block {
 	height: 574px;
 	/* background: url(desctop__header__new_Blur.jpg)  no-repeat; */
@@ -162,7 +175,7 @@ h2 {
 .logo{
 	margin-bottom: 45px;
 	width: 400px;
-	/* height: 10px; */
+	visibility: hidden;
 }
 .logo>img {
 	display: block;
@@ -368,7 +381,7 @@ h2 {
 	display: inline-block;
 	vertical-align: top;
 	margin: 0 1% 20px;
-	width: 22%;
+	width: 100%;
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
 	border-radius: 6px;
@@ -680,7 +693,7 @@ h2 {
 	font-family: 'Museo Sans', Arial, Helvetica, sans-serif;
 	font-weight: 300;
 	font-size: 16px;
-	color: #ffffff;
+	color: #000000;
 	text-align: center;
 	-ms-text-align-last: center;
 	-moz-text-align-last: center;
@@ -768,6 +781,17 @@ h2 {
 	z-index: 5;
 }
 
+/* !Таймер */
+.time_sale, .title_sale{
+text-align: center;
+font-size: 50px;
+color: #7ad06b;
+}
+.time_sale{
+	margin-bottom: 80px;
+	
+}
+/* !Таймер */
 
 
 
@@ -943,6 +967,7 @@ h2 {
 	}
 	.logo{
 		width: 320px;
+		visibility: visible;
 	}
 	.header_section .content_block .info-action{
 		padding-top: 10px;
