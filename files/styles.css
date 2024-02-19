@@ -155,18 +155,17 @@ height: 500px;
 	padding: 0 80px;
 	gap: 20px;
 }
+.price_block{
+	display: flex;
+	padding: 0px 0px 0px 15px;
+}
 /* ! Grid for product */
 
 .header_section .content_block {
 	height: 574px;
-	/* background: url(desctop__header__new_Blur.jpg)  no-repeat; */
-	/* background: url(desctop__header__new_Blur1.jpg)  no-repeat; */
 	background: url(desctop__header__new_shadow.jpg)  no-repeat;
-	/* background: url(desctop__header__new_Blur.jpg)  no-repeat; */
 	background-clip: content-box;
 	background-size: cover;
-	
-	
 }
 .header_section .content_block .info_block {
 	width: 560px;
@@ -923,7 +922,18 @@ color: #7ad06b;
 	}
 }
 @media screen and (max-width: 659px) {
-	
+	/* ! grid product item */
+	.clearfix{
+padding: 0;
+	}
+	.price_block{
+		justify-content: center;
+	}
+	b{
+		margin: 10px;
+	}
+	/* ! grid product item */
+
 	/* styles */
 	.wrapper {
 		width: 320px;
