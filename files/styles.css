@@ -161,6 +161,45 @@ height: 500px;
 }
 /* ! Grid for product */
 
+/* ! Color_product  */
+.colorproduct_positiob{
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+.color_product{
+	border-radius: 15px;
+width: 15px;
+height: 15px;
+margin-bottom: 15px;
+border: 1px solid #000;
+}
+.beg{
+	background-color: #eae1b3 ;
+}
+.haki{
+	background-color: #877994;
+}
+.granit{
+	background-color: #2c9d3e;
+}
+.black{
+	background-color: #000;
+}
+.white{
+	background-color: #fff;
+}
+.pudra{
+background-color: #ffccaa;
+}
+.golub{
+	background-color: #008877;
+}
+.green{
+	background-color: #2c9d3e;
+}
+/* ! Color_product  */
+
 .header_section .content_block {
 	height: 574px;
 	background: url(desctop__header__new_shadow.jpg)  no-repeat;
