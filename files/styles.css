@@ -198,6 +198,19 @@ background-color: #ffccaa;
 .green{
 	background-color: #2c9d3e;
 }
+.blue_dark{
+	background-color: #0e3d64;
+}
+.vino{
+	background-color: rgba(97, 15, 15, 0.993);
+}
+.red{
+	background-color: rgba(252, 0, 0, 0.993);
+
+}
+.rozov{
+	background-color: #da2f7f;
+}
 /* ! Color_product  */
 
 .header_section .content_block {
