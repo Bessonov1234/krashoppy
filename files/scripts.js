@@ -1,3 +1,11 @@
+function sliders(){
+	const img1 = document.querySelector('.button-color-blue')
+
+	next.addEvenListener('click', ()=>{
+
+	})
+}
+sliders()
 $(document).ready(function() {
 
 	/* lazy load */
@@ -31,6 +39,12 @@ $(document).ready(function() {
 
 
 });
+// $(".product_item .content .button-color-blue").click(function(){
+// 	$(".product_item").removeClass("active");
+// 	$(this).parent().parent(".product_item").addClass("active");
+// });
+
+
 
 
 $(window).on("load", function(){
@@ -66,3 +80,10 @@ $(window).on("load", function(){
 	});
 	
 });
+
+
+
+
+
+
+
