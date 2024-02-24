@@ -218,6 +218,8 @@ background-color: #ffccaa;
 .siri{
 	background-color: rgb(209, 205, 205);
 }
+
+
 /* ! Color_product  */
 
 .header_section .content_block {
@@ -981,6 +983,11 @@ color: #7ad06b;
 	}
 }
 @media screen and (max-width: 659px) {
+
+img{
+	height: 450px;
+}
+
 	/* ! grid product item */
 	.clearfix{
 padding: 0;
@@ -992,7 +999,11 @@ padding: 0;
 		margin: 10px;
 	}
 	/* ! grid product item */
-
+	.size1164{
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
 	/* styles */
 	.wrapper {
 		width: 320px;
