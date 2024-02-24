@@ -987,6 +987,10 @@ color: #7ad06b;
 img{
 	height: 450px;
 }
+.logo>img{
+	height: auto !important
+
+}
 
 	/* ! grid product item */
 	.clearfix{
@@ -1028,7 +1032,7 @@ padding: 0;
 		/* background: url(mobile__header_bg7fccc.jpg) 50% 80px no-repeat #fff; */
 	}
 	.sale{
-		left: 270px;
+		left: 239px;
 		top: 91px;
 		width: 90px;
 		height: 90px;
